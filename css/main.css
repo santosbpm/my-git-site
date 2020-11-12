@@ -1,4 +1,6 @@
-html, body, div, h1, a, img, ol, li, footer, header, nav {
+/* Base */
+
+html, body, div, h1, a, img, ul, li, footer, header, nav, p {
     margin: 0;
     padding: 0;
     border: 0;
@@ -20,31 +22,9 @@ body {
     background-color: #aba899;
 }
 
-body:after {
-    content: '';
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: inherit;
-    opacity: 0;
-    z-index: 1;
-    background-color: #aba899;
-    background-repeat: repeat,      no-repeat;
-    background-size: 100px 100px, cover;
-    background-position: top left,    center center;
-    transition: opacity 1.75s ease-out;
-}
-
 a {
-    transition: color 0.2s ease, border-color 0.2s ease;
     color: inherit;
     text-decoration: none;
-}
-  
-a:before {
-    transition: color 0.2s ease, text-shadow 0.2s ease;
 }
   
 a:hover {
@@ -54,29 +34,83 @@ a:hover {
 p {
     margin: 0 0 1.5em 0;
     color: #226c93;
+    font-size: 150%;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 h1 {
-    color: #226c93;
+    color: #226b93;
     line-height: 1.5;
     margin: 0 0 0.75em 0;
     letter-spacing: 0.22em;
     margin: 0 0 0.525em 0;
+    font-size: 200%;
+    font-family: 'Courier New', Courier, monospace;
 }
 
+/* Icons */
 
-.icon {
+.icons {
     text-decoration: none;
     position: relative;
-    border-bottom: none;
+    border: 0;
 }
-
-.icon:before {
-    font-family: 'Courier New', Courier, monospace;
+  
+.icons:before {
     font-style: normal;
     font-weight: normal;
     text-transform: none !important;
 }
+  
+.icons > .label {
+    display: none;
+}
+ 
+/* List */
+  
+ul {
+    margin: 0 0 1.5em 0;
+    padding-left: 1em;
+    font-family: 'Courier New', Courier, monospace;
+}
+  
+ul.icons {
+    cursor: default;
+    list-style: none;
+    padding-left: 0;
+}
+  
+ul.icons li {
+    display: inline-block;
+    padding: 2em;
+}
+  
+ul.icons li a {
+    color: #226c93;
+    position: relative;
+    text-align: center;
+    text-indent: 3.75em;
+    font-size: 130%;
+    border-color: #226b93;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 15px;
+    padding: 10px;
+
+}
+  
+ul.icons li a:hover {
+    color: #5e9fbb;
+    border-color: #5e9fbb;
+}
+
+ul.copyright li {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 130%;
+    font-weight: bolder;
+}
+
+/* Wrapper */
 
 #wrapper {
     display: flex;
@@ -98,6 +132,8 @@ h1 {
     display: block;
 }
 
+/* Main */
+
 #main {
     position: relative;
     max-width: 100%;
@@ -105,11 +141,7 @@ h1 {
     padding: 4.5em 3em 3em 3em ;
     background: #e0dace;
     border-radius: 4px;
-    cursor: default;
     text-align: center;
-    transform-origin: 50% 50%;
-    transform: rotateX(0deg);
-    transition: opacity 1s ease, transform 1s ease;
 }
 
 #main .avatar {
@@ -131,19 +163,21 @@ h1 {
 }
   
 #main .avatar img {
-    width: 20%;
-    height: 20%;
+    width: 200px;
+    height: 200px;
     display: block;
     margin: 0 auto;
     border-radius: 100%;
     box-shadow: 0 0 0 1.5em #e0dace;
 }
 
+/* Footer */
+
 #footer {
     align-self: flex-end;
     width: 100%;
-    padding: 1.5em 0 0 0;
-    color: rgba(255, 255, 255, 0.75);
+    padding: 1.5em 0 1.5em 0;
+    color: #226b93;
     cursor: default;
     text-align: center;
 }
@@ -159,7 +193,7 @@ h1 {
     display: inline-block;
     margin: 0 0 0 0.45em;
     padding: 0 0 0 0.85em;
-    border-left: solid 1px rgba(255, 255, 255, 0.5);
+    border-left: solid 1px #226b93;
     line-height: 1;
 }
   
