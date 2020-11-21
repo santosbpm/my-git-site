@@ -200,3 +200,61 @@ ul.copyright li {
 #footer .copyright li:first-child {
     border-left: 0;
 }
+
+/* Responsividade */
+
+@media screen and (max-width: 480px) {
+    html, body {
+        min-width: 320px;
+    }
+  
+}
+
+@media screen and (max-width: 1680px) {
+    body, input, select, textarea {
+        font-size: 11pt;
+    }
+  
+}
+
+@media screen and (max-width: 480px) {
+    body, input, select, textarea {
+        font-size: 10pt;
+        line-height: 1.75;
+    }
+  
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.65em;
+    }
+  
+}
+
+@media screen and (max-width: 480px) {
+    ul.icons li a:before {
+        font-size: 1.5rem;
+    }
+  
+}
+
+@media screen and (max-width: 480px) {
+    #main {
+        min-width: 0;
+        width: 100%;
+        padding: 4em 2em 2.5em 2em ;
+    }
+  
+    #main .avatar:before {
+        left: -2em;
+        width: calc(100% + 4em);
+    }
+}
+
+@media screen and (max-width: 360px) {
+    #wrapper {
+      padding: 0.75em;
+    }
+  
+}
